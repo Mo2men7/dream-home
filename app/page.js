@@ -47,7 +47,7 @@ export default function Home() {
               height="70px"
               color="green"
               title="Departments"
-              content="5"
+              content="4"
             >
               <HiOutlineHome />
             </ColoredCard>
@@ -57,6 +57,15 @@ export default function Home() {
               color="blue"
               title="Villas"
               content="1"
+            >
+              <HiOutlineHomeModern />
+            </ColoredCard>
+            <ColoredCard
+              width="150px"
+              height="70px"
+              color="yellow"
+              title="Units"
+              content="2"
             >
               <HiOutlineHomeModern />
             </ColoredCard>
