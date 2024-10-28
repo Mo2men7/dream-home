@@ -2,6 +2,8 @@ import { format } from "date-fns";
 import flag from "@/public/flag.svg";
 import dreamHomeSVG from "@/public/dreamHome.svg";
 import sample from "@/public/meh.jpg";
+import img2 from "@/public/img2.jpeg";
+import img3 from "@/public/img3.jpeg";
 import Image from "next/image";
 import ColoredCard from "./_components/ColoredCard";
 import { HiOutlineHome } from "react-icons/hi2";
@@ -9,6 +11,7 @@ import { HiOutlineHomeModern } from "react-icons/hi2";
 import { MdOutlineHomeWork } from "react-icons/md";
 import { FaBarsStaggered } from "react-icons/fa6";
 import MessageCard from "./_components/MessageCard";
+import UnitCard from "./_components/UnitCard";
 
 export default function Home() {
   const todayDate = format(new Date(), "EEE, dd MMM yyyy");
@@ -108,8 +111,23 @@ export default function Home() {
             />
           </div>
         </div>
-        <div className="col-span-2 row-span-6 bg-gray-600 col-start-5 row-start-1 rounded-md">
-          4
+
+        <div className="col-span-2 row-span-6 col-start-5 row-start-1 rounded-md bg-gray-50 p-2">
+          <UnitCard
+            name="Unit Nomber One"
+            img={img2}
+            interances="2"
+            rooms="3"
+            baths="2"
+          />
+          <hr className="my-3" />
+          <UnitCard
+            name="Unit Nomber One"
+            img={img3}
+            interances="2"
+            rooms="4"
+            baths="3"
+          />
         </div>
       </main>
     </div>
