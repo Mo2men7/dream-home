@@ -10,6 +10,7 @@ import { HiOutlineHome } from "react-icons/hi2";
 import { HiOutlineHomeModern } from "react-icons/hi2";
 import { MdOutlineHomeWork } from "react-icons/md";
 import { FaBarsStaggered } from "react-icons/fa6";
+import { PiBuilding } from "react-icons/pi";
 import MessageCard from "./_components/MessageCard";
 import UnitCard from "./_components/UnitCard";
 
@@ -27,7 +28,50 @@ export default function Home() {
       </section>
 
       <main className="grid grid-cols-6 grid-rows-6 gap-4 h-screen">
-        <div className="col-span-4 row-span-3 bg-gray-300 rounded-md">1</div>
+        <div
+          className="col-span-4 row-span-3 rounded-md"
+          style={{
+            backgroundImage: `url(${img2.src})`,
+            backgroundSize: "cover",
+          }}
+        >
+          <div
+            id="firstContainer"
+            className="flex flex-col justify-between h-full rounded-md"
+          >
+            <div className="flex items-center gap-10 bg-gray-100 w-1/2 rounded-br-xl p-5">
+              <div>
+                <small className="text-gray-500">Property Cost per Year</small>
+                <p className="text-3xl">SAR 40,000</p>
+              </div>
+              <div>
+                <small className="text-gray-500">Viewers</small>
+                <p className="text-3xl">234</p>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-10 bg-gray-100 w-3/5 rounded-tr-xl p-2">
+              <ColoredCard
+                color="green"
+                width="250px"
+                height="150px"
+                title="Nomber of Buildings"
+                content="7 Buildings"
+              >
+                <PiBuilding />
+              </ColoredCard>
+              <ColoredCard
+                color="blue"
+                width="250px"
+                height="150px"
+                title="Nomber of Clients"
+                content="123 Clients"
+              >
+                <PiBuilding />
+              </ColoredCard>
+            </div>
+          </div>
+        </div>
 
         <div className="col-span-2 row-span-3 col-start-1 row-start-4 rounded-md bg-gray-50 flex gap-2 p-2 flex-wrap">
           <div>
