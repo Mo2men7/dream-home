@@ -22,30 +22,26 @@ function UnitCard({ name, img, interances, rooms, baths }) {
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
         </p>
       </div>
-      <div className="flex items-center gap-3 text-gray-500">
+      <div className="flex items-center text-gray-500 justify-around">
         <div className="flex items-center gap-1">
           <span className="text-green-700">
             <GiCryptEntrance />
           </span>
-          <span>{interances} interances</span>
+          <span>{interances} inter</span>
         </div>
-
-        <span>|</span>
 
         <div className="flex items-center gap-1">
           <span className="text-green-700">
             <MdOutlineBedroomParent />
           </span>
-          <span>{rooms} rooms</span>
+          <span>{rooms} rms</span>
         </div>
-
-        <span>|</span>
 
         <div className="flex items-center gap-1">
           <span className="text-green-700">
             <MdOutlineAirlineSeatLegroomNormal />
           </span>
-          <span>{baths} bathrooms</span>
+          <span>{baths} baths</span>
         </div>
       </div>
     </div>

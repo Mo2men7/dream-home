@@ -2,6 +2,7 @@ import { format } from "date-fns";
 import flag from "@/public/flag.svg";
 import dreamHomeSVG from "@/public/dreamHome.svg";
 import sample from "@/public/meh.jpg";
+import model from "@/public/model1.png";
 import img2 from "@/public/img2.jpeg";
 import img3 from "@/public/img3.jpeg";
 import Image from "next/image";
@@ -27,14 +28,23 @@ export default function Home() {
         </div>
       </section>
 
-      <main className="grid grid-cols-6 grid-rows-6 gap-4 h-screen">
+      <main className="grid grid-cols-8 grid-rows-6 gap-4 h-screen">
         <div
-          className="col-span-4 row-span-3 rounded-md"
-          style={{
-            backgroundImage: `url(${img2.src})`,
-            backgroundSize: "cover",
-          }}
+          className="col-span-6 row-span-3 rounded-md relative overflow-hidden"
+          // style={{
+          //   backgroundImage: `url(${model.src})`,
+          //   backgroundSize: "contain",
+          //   backgroundRepeat: "no-repeat",
+          // }}
         >
+          <Image
+            src={model}
+            alt="model"
+            width={450}
+            height={250}
+            className="absolute right-0"
+          />
+
           <div
             id="firstContainer"
             className="flex flex-col justify-between h-full rounded-md"
@@ -73,7 +83,10 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="col-span-2 row-span-3 col-start-1 row-start-4 rounded-md bg-gray-50 flex gap-2 p-2 flex-wrap">
+        <div
+          id="statistics"
+          className="col-span-4 row-span-3 row-start-4 rounded-lg bg-white flex gap-2 p-2 flex-wrap xl:flex-nowrap h-fit"
+        >
           <div>
             <Image
               src={dreamHomeSVG}
@@ -124,7 +137,10 @@ export default function Home() {
           {/* <span>4 apartments, 2 units, and a villa</span> */}
         </div>
 
-        <div className="col-span-2 row-span-3 p-2 col-start-3 row-start-4 rounded-md bg-gray-50">
+        <div
+          id="messages"
+          className="col-span-2 row-span-3 col-start-5 row-start-4 p-2 rounded-lg bg-white h-fit"
+        >
           <div className="flex justify-between items-center mb-2">
             <span className="font-semibold">Messages</span>
             <span className="bg-gray-100 rounded-full p-2">
@@ -156,9 +172,12 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="col-span-2 row-span-6 col-start-5 row-start-1 rounded-md bg-gray-50 p-2">
+        <div
+          id="list"
+          className="col-span-2 row-span-6 col-start-7 rounded-lg bg-white p-2 h-fit"
+        >
           <UnitCard
-            name="Unit Nomber One"
+            name="Unit Number One"
             img={img2}
             interances="2"
             rooms="3"
@@ -166,7 +185,7 @@ export default function Home() {
           />
           <hr className="my-3" />
           <UnitCard
-            name="Unit Nomber One"
+            name="Unit Number One"
             img={img3}
             interances="2"
             rooms="4"
